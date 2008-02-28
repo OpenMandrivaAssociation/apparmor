@@ -14,7 +14,7 @@ BuildRequires:  latex2html
 BuildRequires:  bison
 BuildRequires:  swig
 BuildRequires:  pkgconfig
-BuildRequires:  apparmor-parser
+BuildRequires:  perl-devel
 Requires(preun): rpm-helper
 Requires(post): rpm-helper
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
