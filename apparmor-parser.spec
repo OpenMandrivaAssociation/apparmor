@@ -1,8 +1,8 @@
-%define rev 1088
+%define rev 1268
 
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor-parser
-Version:	2.1.2
+Version:	2.3
 Release:	%mkrel 1.%{rev}.1
 License:	GPL
 Group:		System/Base
