@@ -1,8 +1,8 @@
-%define rev 1268
+%define rev 1349
 
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor-parser
-Version:	2.3
+Version:	2.3.1
 Release:	%mkrel 1.%{rev}.1
 License:	GPL
 Group:		System/Base
@@ -41,6 +41,18 @@ rm -rf %{buildroot}
 
 %{makeinstall_std} DISTRO=redhat TESTBUILDDIR=$(pwd)
 
+cat > README.urpmi << EOF
+Mandriva RPM specific notes 
+
+AppArmor is no longer a kernel module: instead, it is built in to the kernel.
+To enable it, you can pass the apparmor=1 parameter to the kernel command line.
+Kernel parameters can be added with the drakboot utility, Mandriva's boot
+configuration tool, available from the Mandriva Control Center; by editing the
+bootloader configuration file - /boot/grub/menu.lst for GRUB or /etc/lilo.conf
+for LILO - manually; or by entering the kernel parameter after selecting the
+desired kernel on the boot menu screen. 
+EOF
+
 %post
 %_post_service apparmor
 %_post_service aaeventd
@@ -54,7 +66,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc COPYING.GPL README
+%doc COPYING.GPL README*
 %dir %{_sysconfdir}/apparmor
 %config(noreplace) %{_sysconfdir}/apparmor/subdomain.conf
 %{_sysconfdir}/init.d/aaeventd
