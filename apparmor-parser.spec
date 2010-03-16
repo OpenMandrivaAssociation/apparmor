@@ -3,7 +3,7 @@
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor-parser
 Version:	2.3.1
-Release:	%mkrel 1.%{rev}.2
+Release:	%mkrel 1.%{rev}.3
 License:	GPL
 Group:		System/Base
 URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
