@@ -1,0 +1,47 @@
+--- rc.apparmor.redhat.orig	2007-09-13 16:31:16.000000000 -0300
++++ rc.apparmor.redhat	2007-09-13 16:34:52.000000000 -0300
+@@ -52,7 +52,7 @@
+ fi
+ 
+ usage() {
+-	echo "Usage: $0 {start|stop|restart|try-restart|reload|force-reload|status|kill}"
++	echo "Usage: $0 {start|stop|restart|try-restart|condreload|condrestart|reload|force-reload|status|kill}"
+ }
+ 
+ aa_log_success_msg() {
+@@ -98,22 +98,35 @@
+ 	start)
+ 		apparmor_start
+ 		rc=$?
++                [ "$rc" -eq "0" ] && touch /var/lock/subsys/apparmor
+ 		;;
+ 	stop)
+ 		apparmor_stop
+ 		rc=$?
++                [ "$rc" -eq "0" ] && rm -f /var/lock/subsys/apparmor
+ 		;;
+ 	restart|reload|force-reload)
+ 		apparmor_restart
+ 		rc=$?
++                [ "$rc" -eq "0" ] && touch /var/lock/subsys/apparmor
+ 		;;
+ 	try-restart)
+ 		apparmor_try_restart
+ 		rc=$?
++                [ "$rc" -eq "0" ] && touch /var/lock/subsys/apparmor
+ 		;;
++        condreload|condrestart)
++                if [ -f /var/lock/subsys/apparmor ]; then
++                        rm -f /var/lock/subsys/apparmor
++                        apparmor_restart
++                        rc=$?
++                        [ "$rc" -eq "0" ] && touch /var/lock/subsys/apparmor
++                fi
++                ;;
+ 	kill)
+ 		apparmor_kill
+ 		rc=$?
++                [ "$rc" -eq "0" ] && rm -f /var/lock/subsys/apparmor
+ 		;;
+ 	status)
+ 		apparmor_status
