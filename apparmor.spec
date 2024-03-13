@@ -21,6 +21,7 @@ BuildRequires:  swig
 BuildRequires:  pkgconfig
 BuildRequires:  perl-devel
 BuildRequires:	perl(Pod::Checker)
+BuildRequires:	perl(Pod::Html)
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	slibtool
