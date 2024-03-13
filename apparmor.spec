@@ -15,8 +15,8 @@ Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
 Source0:	https://gitlab.com/apparmor/apparmor/-/archive/v%{version}%{?beta:-%{beta}}/apparmor-v%{version}%{?beta:-%{beta}}.tar.bz2
 BuildRequires:  flex
-BuildRequires:  latex2html
 BuildRequires:  bison
+BuildRequires:  latex2html
 BuildRequires:  swig
 BuildRequires:  pkgconfig
 BuildRequires:  perl-devel
@@ -33,6 +33,7 @@ BuildRequires:	gawk
 BuildRequires:	which
 BuildRequires:	apache-devel
 BuildRequires:	make
+BuildREquires:	stdc++-static-devel
 %rename apparmor-utils
 %rename apparmor-parser
 %rename apparmor-profiles
