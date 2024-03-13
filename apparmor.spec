@@ -28,6 +28,8 @@ BuildRequires:	gettext
 BuildRequires:	pkgconfig(pam)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(systemd)
+BuildRequires:	gawk
+BuildRequires:	which
 BuildRequires:	apache-devel
 BuildRequires:	make
 %rename apparmor-utils
