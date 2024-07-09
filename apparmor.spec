@@ -8,7 +8,7 @@
 
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor
-Version:	3.1.7
+Version:	4.0.1
 Release:	%{?beta:0.%{beta}.}1
 License:	GPL
 Group:		System/Base
