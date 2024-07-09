@@ -202,7 +202,7 @@ cd ..
 %{_mandir}/man5/*.5*
 %{_mandir}/man7/*.7*
 %{_mandir}/man8/*.8*
-%{_var}/lib/apparmor
+#{_var}/lib/apparmor
 
 %files -n pam_apparmor
 %{_libdir}/security/pam_apparmor.so
