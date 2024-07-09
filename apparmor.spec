@@ -23,6 +23,7 @@ BuildRequires:  perl-devel
 BuildRequires:	perl(Pod::Checker)
 BuildRequires:	perl(Pod::Html)
 BuildRequires:	autoconf
+BuildRequires:	autoconf-archive
 BuildRequires:	automake
 BuildRequires:	slibtool
 BuildRequires:	gettext
@@ -33,7 +34,7 @@ BuildRequires:	gawk
 BuildRequires:	which
 BuildRequires:	apache-devel
 BuildRequires:	make
-BuildREquires:	stdc++-static-devel
+BuildRequires:	stdc++-static-devel
 %rename apparmor-utils
 %rename apparmor-parser
 %rename apparmor-profiles
