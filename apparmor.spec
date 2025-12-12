@@ -9,7 +9,7 @@
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor
 Version:	4.0.3
-Release:	%{?beta:0.%{beta}.}2
+Release:	%{?beta:0.%{beta}.}3
 License:	GPL
 Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
