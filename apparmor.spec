@@ -14,6 +14,7 @@ License:	GPL
 Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
 Source0:	https://gitlab.com/apparmor/apparmor/-/archive/v%{version}%{?beta:-%{beta}}/apparmor-v%{version}%{?beta:-%{beta}}.tar.bz2
+Source1:	apparmor.rpmlintrc
 BuildRequires:	libtool-base
 BuildRequires:  flex
 BuildRequires:  bison
