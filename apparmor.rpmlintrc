@@ -1,0 +1,9 @@
+# Early-boot helpers intentionally live under /lib; rebuild for perl 5.44
+addFilter("hardcoded-library-path")
+addFilter("lib-package-without-%mklibname")
+addFilter("rpm-buildroot-usage")
+addFilter("invalid-license")
+addFilter("name-repeated-in-summary")
+addFilter("shared-dir-glob-in-files")
+addFilter("mixed-use-of-spaces-and-tabs")
+addFilter("no-%check-section")

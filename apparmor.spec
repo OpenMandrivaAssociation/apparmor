@@ -120,7 +120,7 @@ cd ../../binutils
 %make_build CFLAGS="$RPM_OPT_FLAGS" TESTBUILDDIR=$(pwd) LIBTOOL=slibtool SBINDIR=%{_bindir}
 
 cd ../parser
-%make_build CFLAGS="$RPM_OPT_FLAGS" TESTBUILDDIR=$(pwd) LIBTOOL=slibtool SBINDIR=%{_bindir} USR_SBINDIR=%{buildroot}%{_bindir}
+%make_build CFLAGS="$RPM_OPT_FLAGS" TESTBUILDDIR=$(pwd) LIBTOOL=slibtool SBINDIR=%{_bindir} USR_SBINDIR=%{_bindir}
 
 cd ../utils
 %make_build CFLAGS="$RPM_OPT_FLAGS" TESTBUILDDIR=$(pwd) LIBTOOL=slibtool BINDIR=%{_bindir}
