@@ -9,7 +9,7 @@
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor
 Version:	4.0.3
-Release:	%{?beta:0.%{beta}.}8
+Release:	%{?beta:0.%{beta}.}9
 License:	GPL
 Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
@@ -18,7 +18,8 @@ Source1:	apparmor.rpmlintrc
 BuildRequires:	libtool-base
 BuildRequires:  flex
 BuildRequires:  bison
-BuildRequires:  latex2html
+# latex2html needs broken tetex-* provides; techdocs optional for rebuild
+#BuildRequires:  latex2html
 BuildRequires:  swig
 BuildRequires:  pkgconfig
 BuildRequires:  perl-devel
