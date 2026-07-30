@@ -9,7 +9,7 @@
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor
 Version:	4.0.3
-Release:	%{?beta:0.%{beta}.}9
+Release:	%{?beta:0.%{beta}.}10
 License:	GPL
 Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
@@ -32,6 +32,7 @@ BuildRequires:	slibtool
 BuildRequires:	gettext
 BuildRequires:	pkgconfig(pam)
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(systemd)
 BuildRequires:	gawk
 BuildRequires:	which
