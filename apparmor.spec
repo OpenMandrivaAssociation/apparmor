@@ -8,7 +8,7 @@
 
 Summary:	AppArmor userlevel parser utility
 Name:		apparmor
-Version:	4.0.3
+Version:	5.0.2
 Release:	%{?beta:0.%{beta}.}10
 License:	GPL
 Group:		System/Base
@@ -102,7 +102,7 @@ Group: Servers
 AppArmor support for the Apache web server
 
 %prep
-%autosetup -p1 -n apparmor-v%{version}%{?beta:-%{beta}}
+%autosetup -p1 -n apparmor-v5.0.2
 
 if ! echo %{__cc} |grep -q gcc; then
 	sed -i -e 's,-flto-partition=none,,' libraries/libapparmor/src/Makefile.am parser/Makefile
