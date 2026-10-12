@@ -1,5 +1,4 @@
 addFilter("hardcoded-library-path")
-addFilter("lib-package-without-%mklibname")
 addFilter("invalid-license")
 addFilter("name-repeated-in-summary")
 addFilter("shared-dir-glob-in-files")
