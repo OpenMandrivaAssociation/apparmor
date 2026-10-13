@@ -1,0 +1,11 @@
+--- a/libraries/libapparmor/src/kernel.c
++++ b/libraries/libapparmor/src/kernel.c
+@@ -372,7 +372,7 @@
+ 	__u32 total_size = sizeof(struct lsm_ctx) + 8;
+ 	union {
+ 		struct lsm_ctx ctx_buff;
+-		char buff[total_size]; /* force allocate trailing space */
++		char buff[sizeof(struct lsm_ctx) + 8]; /* force allocate trailing space */
+ 	} buff;
+ 	struct lsm_ctx *ctx = &buff.ctx_buff;
+ 

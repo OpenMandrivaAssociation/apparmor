@@ -15,6 +15,8 @@ Group:		System/Base
 URL:		https://gitlab.com/apparmor/apparmor
 Source0:	https://gitlab.com/apparmor/apparmor/-/archive/v%{version}%{?beta:-%{beta}}/apparmor-v%{version}%{?beta:-%{beta}}.tar.bz2
 Source1:	apparmor.rpmlintrc
+# Clang rejects a variable-length array as a union member.
+Patch0:		apparmor-clang-vla.patch
 BuildRequires:	libtool-base
 BuildRequires:  flex
 BuildRequires:  bison
