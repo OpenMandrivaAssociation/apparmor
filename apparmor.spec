@@ -213,6 +213,7 @@ cd ..
 /lib/apparmor/profile-load
 %{_bindir}/*
 %{_datadir}/apparmor
+%{_datadir}/polkit-1/actions/net.apparmor.pkexec.aa-notify.policy
 %{_mandir}/man1/*.1*
 %{_mandir}/man5/*.5*
 %{_mandir}/man7/*.7*
