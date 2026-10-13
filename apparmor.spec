@@ -17,6 +17,8 @@ Source0:	https://gitlab.com/apparmor/apparmor/-/archive/v%{version}%{?beta:-%{be
 Source1:	apparmor.rpmlintrc
 # Clang rejects a variable-length array as a union member.
 Patch0:		apparmor-clang-vla.patch
+# SWIG 4.5 dropped %new_copy_array.
+Patch1:		apparmor-swig-new-copy.patch
 BuildRequires:	libtool-base
 BuildRequires:  flex
 BuildRequires:  bison
