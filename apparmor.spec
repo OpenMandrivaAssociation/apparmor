@@ -166,6 +166,11 @@ cd ../../profiles
 %make_install LIBTOOL=slibtool
 cd ..
 
+# 5.0.2 moved the systemd unit and profile loader out of parser/.
+cd init
+%make_install DISTRO=redhat SBINDIR=%{buildroot}%{_bindir} USR_SBINDIR=%{buildroot}%{_bindir}
+cd ..
+
 %find_lang aa-binutils
 %find_lang apparmor-parser
 %find_lang apparmor-utils
