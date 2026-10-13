@@ -192,7 +192,8 @@ cd ..
 %files -n python-apparmor
 %{py_puresitedir}/apparmor
 %{py_puresitedir}/apparmor*.*-info
-%{py_platsitedir}/LibAppArmor
+%{py_platsitedir}/LibAppArmor.py
+%{py_platsitedir}/_LibAppArmor*.so
 %{py_platsitedir}/LibAppArmor*.*-info
 
 %files -n perl-apparmor
