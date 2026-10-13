@@ -36,6 +36,7 @@ BuildRequires:	slibtool
 BuildRequires:	gettext
 BuildRequires:	pkgconfig(pam)
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(libzstd)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(systemd)
 BuildRequires:	gawk
