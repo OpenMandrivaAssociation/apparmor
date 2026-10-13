@@ -3,7 +3,7 @@ string with the macros that still expand. Matches upstream master.
 
 --- a/libraries/libapparmor/swig/SWIG/libapparmor.i
 +++ b/libraries/libapparmor/swig/SWIG/libapparmor.i
-@@ -143,7 +143,10 @@
+@@ -143,7 +143,11 @@
    }
    if (alloc_status != SWIG_NEWOBJ) {
      // Unconditionally copy because the C function modifies the string in place
